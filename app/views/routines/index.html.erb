@@ -2,3 +2,12 @@
 
 <%= link_to 'Create New Routine', new_routine_path %>
 <!-- ルーティンの一覧表示 -->
+<ul>
+  <% @routines.each do |routine| %>
+    <li>
+      <a href="/routines/<%= routine.id %>">
+        <%= routine.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
