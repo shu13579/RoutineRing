@@ -3,4 +3,8 @@
 <h3><%= @routine.title %></h3>
 <p><%= @routine.body %></p>
 
+<ul>
+  <li><%= link_to "Edit", edit_routine_path(@routine) %></li>
+</ul>
+
 <%= link_to 'ホームへ戻る', routines_path %>
