@@ -5,6 +5,7 @@
 
 <ul>
   <li><%= link_to "Edit", edit_routine_path(@routine) %></li>
+  <li><%= link_to "Delete", routine_path(@routine), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
 </ul>
 
 <%= link_to 'ホームへ戻る', routines_path %>

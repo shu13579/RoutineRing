@@ -35,6 +35,13 @@ class RoutinesController < ApplicationController
     end
   end
 
+  def destroy
+    @article = Routine.find(params[:id])
+    @article.destroy
+
+    redirect_to routines_path, status: :see_other
+  end
+
   private
     def routine_params
       params.require(:routine).permit(:title, :body)
