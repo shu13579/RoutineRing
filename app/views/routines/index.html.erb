@@ -1,4 +1,14 @@
 <h1>RoutineRing</h1>
 
-<%= link_to 'Create New Routine', new_routine_path %>
-<!-- ルーティンの一覧表示 -->
+<%= link_to 'Create New Routine', new_routine_path %><br><br>
+
+
+<%= "Your Routine List" %><br>
+<ul>
+  <% @routines.each do |routine| %>
+    <li>
+      <%= link_to routine.title, routine %>
+      </a>
+    </li>
+  <% end %>
+</ul>
