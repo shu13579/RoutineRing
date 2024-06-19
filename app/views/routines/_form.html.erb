@@ -1,0 +1,29 @@
+<%= form_with model: routine do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% routine.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :couter %><br>
+    <%= form.number_field :counter %>
+    <% routine.errors.full_messages_for(:counter).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :completed %><br>
+    <%= form.check_box :completed %>
+    <% routine.errors.full_messages_for(:completed).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
