@@ -1,7 +1,8 @@
 <h1><%= "Your Routine" %></h1>
 
 <h3><%= @routine.title %></h3>
-<p><%= @routine.body %></p>
+<p><%= @routine.counter %></p>
+<p><%= @routine.completed %></p>
 
 <ul>
   <li><%= link_to "Edit", edit_routine_path(@routine) %></li>

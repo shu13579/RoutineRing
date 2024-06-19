@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_01_152518) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_08_150457) do
   create_table "routines", force: :cascade do |t|
     t.string "title"
-    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "completed", default: false
+    t.integer "daily_count", default: 1
+    t.integer "counter", default: 1
   end
 
 end

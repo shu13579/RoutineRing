@@ -44,6 +44,6 @@ class RoutinesController < ApplicationController
 
   private
     def routine_params
-      params.require(:routine).permit(:title, :body)
+      params.require(:routine).permit(:title, :counter, :completed)
     end
 end
